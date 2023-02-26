@@ -42,15 +42,15 @@ void exibirEmOrdem(No* root){
 void exibirPreOrdem(No* root){
     if(root != NULL){
         printf(" (%d) ", root->value);
-        exibirEmOrdem(root->left);
-        exibirEmOrdem(root->right);
+        exibirPreOrdem(root->left);
+        exibirPreOrdem(root->right);
     }
 }
 
 void exibirPosOrdem(No* root){
     if(root != NULL){
-        exibirEmOrdem(root->left);
-        exibirEmOrdem(root->right);
+        exibirPosOrdem(root->left);
+        exibirPosOrdem(root->right);
         printf(" (%d) ", root->value);
     }
 }
